@@ -1,5 +1,10 @@
+
+function previousPage() {
+    window.location.assign("../html/login.html")
+  }
+  
 function bookEmployee() {
-    window.location.assign("./bookuser.html")
+    window.location.assign("./login.html")
 }
 
 function createEmployee() {

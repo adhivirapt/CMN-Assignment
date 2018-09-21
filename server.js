@@ -20,9 +20,6 @@ module.exports = MockBase => class MyMockModule extends MockBase {
                     name: username
                 }).toArray(function (err, result) {
                   if (err) throw err;
-                  console.log(result)
-                  console.log(result[0].password)
-                  console.log(result[0].admin)
                   if (result[0].password == password) {
                     ctx.body = { 
                       login : "success" ,
@@ -59,9 +56,8 @@ module.exports = MockBase => class MyMockModule extends MockBase {
               // Use connect method to connect to the server
               MongoClient.connect(url, function (err, db) {
                 var dbo = db.db("mydb");
+                // base64 to JSON object
                 var param = JSON.parse(atob(q))
-                console.log(param.startDate)
-                console.log(new Date(param.startDate))
                 dbo.collection("myproject").find({
                   $and: [{
                       $or: [{
@@ -104,7 +100,6 @@ module.exports = MockBase => class MyMockModule extends MockBase {
           },
           response: function (ctx) {
 
-            // ctx.body = "haha"
             return new Promise((resolve, reject) => {
               var MongoClient = require('mongodb').MongoClient
               var shortid = require('shortid')
@@ -170,7 +165,6 @@ module.exports = MockBase => class MyMockModule extends MockBase {
                       console.log(result);
                       db.close();
                     });
-                    // db.close();
                     resolve();
                   })
               });
@@ -187,10 +181,7 @@ module.exports = MockBase => class MyMockModule extends MockBase {
           response: function (ctx) {
             return new Promise((resolve, reject) => {
               var MongoClient = require('mongodb').MongoClient
-              // Connection URL
               var url = 'mongodb://localhost:27017/myproject';
-              // Use connect method to connect to the server
-
               MongoClient.connect(url, function (err, db) {
                 var q = ctx.request.query
                 var dbo = db.db("mydb");
@@ -269,6 +260,7 @@ module.exports = MockBase => class MyMockModule extends MockBase {
   }
 }
 
+// return array of dates within the requested time period
 function getDates(startDate, endDate) {
   var dates = [];
   year = startDate.getFullYear(),

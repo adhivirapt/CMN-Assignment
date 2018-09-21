@@ -1,18 +1,16 @@
 
+function previousPage() {
+  window.location.assign("../html/admin.html")
+}
+
 function postRequest(){
   var xhttp = new XMLHttpRequest();
-  // var queryStringParam = search()
   xhttp.onreadystatechange = function () {
-       
         alert(xhttp.response)
-      // generateTable(xhttp.response)
-  
 }
   xhttp.open("POST", `http://127.0.0.1:8000/createUser`, true);
   xhttp.setRequestHeader("Content-Type", "application/json","Access-Control-Allow-Origin","*");
-  console.log(getValues())
   xhttp.send(JSON.stringify(getValues()));
-
 }
 
 function getValues() {

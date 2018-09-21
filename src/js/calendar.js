@@ -1,6 +1,6 @@
-var id = "8e_WQd9F5"
+// current version only support one ID. Further work has to be done her
+var id = "CROY9CVFN"
 getEvents().then(function (result) {
-  console.log(JSON.stringify(result))
   $(".responsive-calendar").responsiveCalendar({
     time: '2018-10',
     events: result,
@@ -26,6 +26,7 @@ function addLeadingZero(num) {
     return "" + num;
   }
 }
+// get schedule for an employee
 function getEvents() {
   return new Promise((resolve, reject) => {
     var xhttp = new XMLHttpRequest();
@@ -40,7 +41,7 @@ function getEvents() {
   })
 
 }
-
+//employee accept requested assignment
 function acceptSchedule(date) {
   return new Promise((resolve, reject) => {
     var xhttp = new XMLHttpRequest();
@@ -54,14 +55,13 @@ function acceptSchedule(date) {
         resolve()
       }
     }
-    console.log(body)
     xhttp.open("POST", `http://127.0.0.1:8000/acceptRequest`, true);
     xhttp.setRequestHeader("Content-Type", "application/json", "Access-Control-Allow-Origin", "*");
     xhttp.send(JSON.stringify(body));
   })
 
 }
-
+// generate events to mark employee's calendar
 function generateEvents(res) {
   requestArray = res.requests
   assignmentArray = res.assignments
