@@ -5,10 +5,9 @@ In order to run the project, local-web-server is used. It provides mock response
 
 ```
 ws --mocks server.js
-
 ```
-This application can also be tested with pre-made JSON database which has to be imported to local MongoDB server. 
-URL for MongoDB connections
+MongoDB local server has to be started before the app is able to run. it can also be tested with pre-made JSON database which has to be imported to local MongoDB server. 
+URL for MongoDB connection:
 
 ```
 'mongodb://localhost:27017/myproject'
