@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="../js/createuser.js"> </script>
+    <style>
+        body {
+            background-color: #303641;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container-register">
+        <div id="title">
+            <i class="material-icons lock">lock</i> Register
+        </div>
+
+        <form>
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="username" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="password" type="password" required class="validate" autocomplete="off">
+            </div>
+        </form>
+        <form>
+            <div class="remember-me">
+                Available days :
+                Mon<input type="checkbox" value="Mon">
+                Tues<input type="checkbox" value="Tues">
+                Wed<input type="checkbox" value="Wed">
+                Thurs<input type="checkbox" value="Thurs">
+                Fri<input type="checkbox" value="Fri">
+            </div>
+        </form>
+        <form>
+            <div class="remember-me">
+                Grades to teach :
+                1<input type="checkbox" value="1">
+                2<input type="checkbox" value="2">
+                3<input type="checkbox" value="3">
+                4<input type="checkbox" value="4">
+                5<input type="checkbox" value="5">
+                6<input type="checkbox" value="6">
+                7<input type="checkbox" value="7">
+                8<input type="checkbox" value="8">
+            </div>
+
+            <div class="clearfix"></div>
+
+        </form>
+        <form>
+            <div class="remember-me">
+                <input type="checkbox">
+                <span style="color: #DDD">Admin</span>
+            </div>
+        </form>
+        <input type="submit" value="Register" onclick="postRequest()" />
+        <input type="submit" value="Back" onclick="previousPage()" />
+    </div>
+</body>
+
+</html>

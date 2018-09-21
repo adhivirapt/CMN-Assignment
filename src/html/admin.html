@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
+    <style>
+        body {
+            background-color: #303641;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2}
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        Michael Scott School
+    </div>
+
+    <form>
+        <div class="input">
+            Start date : <input id="startdate" placeholder="Startdate" type="date" autocomplete="off">
+        </div>
+        <div class="input">
+            End date : <input id="enddate" placeholder="Enddate" type="date" autocomplete="off">
+        </div>
+
+        <div class="clearfix"></div>
+    </form>
+    <form>
+        <div class="remember-me">
+            Available days :
+            Mon<input type="checkbox" value="Mon">
+            Tues<input type="checkbox" value="Tues">
+            Wed<input type="checkbox" value="Wed">
+            Thurs<input type="checkbox" value="Thurs">
+            Fri<input type="checkbox" value="Fri">
+        </div>
+    </form>
+    <form>
+        <div class="remember-me">
+            Grades to teach :
+            1<input type="checkbox" value="1">
+            2<input type="checkbox" value="2">
+            3<input type="checkbox" value="3">
+            4<input type="checkbox" value="4">
+            5<input type="checkbox" value="5">
+            6<input type="checkbox" value="6">
+            7<input type="checkbox" value="7">
+            8<input type="checkbox" value="8">
+        </div>
+
+        <div class="clearfix"></div>
+
+    </form>
+    <table id="listEmployee">
+
+    </table>
+    <input type="submit" value="search" onclick="getRequest()" />
+    <input type="submit" value="createEmployee" onclick="createEmployee()" />
+    <input type="submit" value="bookEmployee" onclick="bookEmployee()" />
+
+
+</body>
+<script type="text/javascript" src="../js/admin.js"> </script>
+
+</html>

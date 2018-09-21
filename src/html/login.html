@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="../js/login.js"> </script>
+</head>
+
+<body>
+    <div id="container-register">
+        <div id="title">
+            Login
+        </div>
+
+        <form>
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="username" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="password" type="password" required class="validate" autocomplete="off">
+            </div>
+        </form>
+        <input type="submit" value="Login" onclick="authenticate()" />
+
+
+
+    </div>
+</body>
+
+</html>

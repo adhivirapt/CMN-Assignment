@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="container-register">
+        <div id="title">
+            Book Employee
+        </div>
+        <form>
+            <div class="input">
+                <input id="id" placeholder="id" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+        </form>
+        <form>
+            <div class="remember-me">
+                Available days :
+                Mon<input type="checkbox" value="Mon">
+                Tues<input type="checkbox" value="Tues">
+                Wed<input type="checkbox" value="Wed">
+                Thurs<input type="checkbox" value="Thurs">
+                Fri<input type="checkbox" value="Fri">
+            </div>
+        </form>
+        <form>
+            <div class="remember-me">
+                Grades to teach :
+                1<input type="checkbox" value="1">
+                2<input type="checkbox" value="2">
+                3<input type="checkbox" value="3">
+                4<input type="checkbox" value="4">
+                5<input type="checkbox" value="5">
+                6<input type="checkbox" value="6">
+                7<input type="checkbox" value="7">
+                8<input type="checkbox" value="8">
+            </div>
+
+            <div class="clearfix"></div>
+
+        </form>
+        <form>
+            <div class="input">
+                Start date : <input id="startdate" placeholder="Startdate" type="date" autocomplete="off">
+            </div>
+            <div class="input">
+                End date : <input id="enddate" placeholder="Enddate" type="date" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+        </form>
+        <input type="submit" value="Book" onclick="bookRequest()" />
+        <input type="submit" value="Back" onclick="previousPage()" />
+
+    </div>
+</body>
+<script type="text/javascript" src="../js/bookuser.js"> </script>
+
+</html>
